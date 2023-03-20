@@ -9,6 +9,7 @@ namespace Proyecto_Ingeneria_Software_II
     internal class Usuario 
     {
         #region Atributos
+        private int cedula;
         private string nombre;
         private string apellidos;
         private string contrasena;
@@ -19,6 +20,12 @@ namespace Proyecto_Ingeneria_Software_II
 
 
         #region Propiedades
+        public int Cedula
+        {
+            get { return cedula; }
+            set { cedula = value; }
+        }
+
         public string Nombre
         {
             set { nombre = value; }

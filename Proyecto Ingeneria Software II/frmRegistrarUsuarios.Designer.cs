@@ -43,6 +43,7 @@
             this.lblTexto = new System.Windows.Forms.Label();
             this.btnRegistrar = new System.Windows.Forms.Button();
             this.pnlNavegacion = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
             this.pbAtras = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnRegistrarUsuarios = new System.Windows.Forms.Button();
@@ -50,7 +51,8 @@
             this.btnCrearAsigarTareas = new System.Windows.Forms.Button();
             this.txtApellidos = new System.Windows.Forms.TextBox();
             this.lblApellidos = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.txtCedula = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.pnlNavegacion.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbAtras)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -60,7 +62,7 @@
             // 
             this.lblNombre.AutoSize = true;
             this.lblNombre.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombre.Location = new System.Drawing.Point(237, 50);
+            this.lblNombre.Location = new System.Drawing.Point(245, 126);
             this.lblNombre.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(65, 17);
@@ -69,7 +71,7 @@
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(460, 50);
+            this.txtNombre.Location = new System.Drawing.Point(468, 120);
             this.txtNombre.Margin = new System.Windows.Forms.Padding(5);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(159, 23);
@@ -88,7 +90,7 @@
             // 
             // txtContrasena
             // 
-            this.txtContrasena.Location = new System.Drawing.Point(460, 152);
+            this.txtContrasena.Location = new System.Drawing.Point(468, 187);
             this.txtContrasena.Margin = new System.Windows.Forms.Padding(5);
             this.txtContrasena.Name = "txtContrasena";
             this.txtContrasena.Size = new System.Drawing.Size(159, 23);
@@ -98,7 +100,7 @@
             // 
             this.lblContrasena.AutoSize = true;
             this.lblContrasena.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblContrasena.Location = new System.Drawing.Point(237, 154);
+            this.lblContrasena.Location = new System.Drawing.Point(245, 193);
             this.lblContrasena.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblContrasena.Name = "lblContrasena";
             this.lblContrasena.Size = new System.Drawing.Size(88, 17);
@@ -107,7 +109,7 @@
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(460, 195);
+            this.txtEmail.Location = new System.Drawing.Point(468, 220);
             this.txtEmail.Margin = new System.Windows.Forms.Padding(5);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(309, 23);
@@ -117,7 +119,7 @@
             // 
             this.lblEmail.AutoSize = true;
             this.lblEmail.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmail.Location = new System.Drawing.Point(237, 197);
+            this.lblEmail.Location = new System.Drawing.Point(245, 226);
             this.lblEmail.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(134, 17);
@@ -126,7 +128,7 @@
             // 
             // txtTelefono
             // 
-            this.txtTelefono.Location = new System.Drawing.Point(460, 239);
+            this.txtTelefono.Location = new System.Drawing.Point(468, 253);
             this.txtTelefono.Margin = new System.Windows.Forms.Padding(5);
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(159, 23);
@@ -136,7 +138,7 @@
             // 
             this.lblTelefono.AutoSize = true;
             this.lblTelefono.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTelefono.Location = new System.Drawing.Point(237, 242);
+            this.lblTelefono.Location = new System.Drawing.Point(245, 259);
             this.lblTelefono.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblTelefono.Name = "lblTelefono";
             this.lblTelefono.Size = new System.Drawing.Size(66, 17);
@@ -147,7 +149,7 @@
             // 
             this.lblPuesto.AutoSize = true;
             this.lblPuesto.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPuesto.Location = new System.Drawing.Point(237, 289);
+            this.lblPuesto.Location = new System.Drawing.Point(245, 294);
             this.lblPuesto.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblPuesto.Name = "lblPuesto";
             this.lblPuesto.Size = new System.Drawing.Size(55, 17);
@@ -157,7 +159,7 @@
             // cbPuesto
             // 
             this.cbPuesto.FormattingEnabled = true;
-            this.cbPuesto.Location = new System.Drawing.Point(460, 285);
+            this.cbPuesto.Location = new System.Drawing.Point(468, 286);
             this.cbPuesto.Margin = new System.Windows.Forms.Padding(5);
             this.cbPuesto.Name = "cbPuesto";
             this.cbPuesto.Size = new System.Drawing.Size(159, 25);
@@ -166,7 +168,7 @@
             // lblTexto
             // 
             this.lblTexto.AutoSize = true;
-            this.lblTexto.Location = new System.Drawing.Point(344, 334);
+            this.lblTexto.Location = new System.Drawing.Point(352, 301);
             this.lblTexto.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblTexto.Name = "lblTexto";
             this.lblTexto.Size = new System.Drawing.Size(0, 17);
@@ -174,7 +176,7 @@
             // 
             // btnRegistrar
             // 
-            this.btnRegistrar.Location = new System.Drawing.Point(387, 374);
+            this.btnRegistrar.Location = new System.Drawing.Point(387, 361);
             this.btnRegistrar.Margin = new System.Windows.Forms.Padding(5);
             this.btnRegistrar.Name = "btnRegistrar";
             this.btnRegistrar.Size = new System.Drawing.Size(183, 41);
@@ -197,6 +199,17 @@
             this.pnlNavegacion.Name = "pnlNavegacion";
             this.pnlNavegacion.Size = new System.Drawing.Size(189, 430);
             this.pnlNavegacion.TabIndex = 13;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(62, 158);
+            this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(71, 17);
+            this.label2.TabIndex = 16;
+            this.label2.Text = "username";
             // 
             // pbAtras
             // 
@@ -277,7 +290,7 @@
             // 
             // txtApellidos
             // 
-            this.txtApellidos.Location = new System.Drawing.Point(460, 102);
+            this.txtApellidos.Location = new System.Drawing.Point(468, 153);
             this.txtApellidos.Margin = new System.Windows.Forms.Padding(5);
             this.txtApellidos.Name = "txtApellidos";
             this.txtApellidos.Size = new System.Drawing.Size(159, 23);
@@ -287,23 +300,31 @@
             // 
             this.lblApellidos.AutoSize = true;
             this.lblApellidos.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblApellidos.Location = new System.Drawing.Point(237, 102);
+            this.lblApellidos.Location = new System.Drawing.Point(245, 159);
             this.lblApellidos.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblApellidos.Name = "lblApellidos";
             this.lblApellidos.Size = new System.Drawing.Size(70, 17);
             this.lblApellidos.TabIndex = 17;
             this.lblApellidos.Text = "Apellidos:";
             // 
-            // label2
+            // txtCedula
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(62, 158);
-            this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(71, 17);
-            this.label2.TabIndex = 16;
-            this.label2.Text = "username";
+            this.txtCedula.Location = new System.Drawing.Point(468, 87);
+            this.txtCedula.Margin = new System.Windows.Forms.Padding(5);
+            this.txtCedula.Name = "txtCedula";
+            this.txtCedula.Size = new System.Drawing.Size(159, 23);
+            this.txtCedula.TabIndex = 20;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(245, 93);
+            this.label3.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(60, 17);
+            this.label3.TabIndex = 19;
+            this.label3.Text = "Cédula:";
             // 
             // frmRegistrarUsuarios
             // 
@@ -311,6 +332,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(804, 429);
+            this.Controls.Add(this.txtCedula);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.txtApellidos);
             this.Controls.Add(this.lblApellidos);
             this.Controls.Add(this.pnlNavegacion);
@@ -365,5 +388,7 @@
         private System.Windows.Forms.TextBox txtApellidos;
         private System.Windows.Forms.Label lblApellidos;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txtCedula;
+        private System.Windows.Forms.Label label3;
     }
 }

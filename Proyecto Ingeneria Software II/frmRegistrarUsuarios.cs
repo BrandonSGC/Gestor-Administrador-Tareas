@@ -40,7 +40,7 @@ namespace Proyecto_Ingeneria_Software_II
         }
 
         private void btnRegistrar_Click(object sender, EventArgs e)
-        {            
+        {
             user.Nombre = txtNombre.Text;
             user.Apellidos = txtApellidos.Text;
             user.Contrasena = txtContrasena.Text;
@@ -94,7 +94,7 @@ namespace Proyecto_Ingeneria_Software_II
         {
             /* Creamos un objeto en el cual le vamos a pasar el string de 
              * conexion de la base de datos. */
-            SqlConnection conexion = new SqlConnection("Data Source=BRANDONPC;Initial Catalog=Prueba;User ID=sa;Password=Bra122020!");
+            SqlConnection conexion = new SqlConnection("Data Source=BRANDONPC;Initial Catalog=Prueba;User ID=sa;Password=root!");
             
             // Abrimos la conexion.
             conexion.Open();
