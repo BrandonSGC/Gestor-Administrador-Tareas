@@ -41,8 +41,6 @@
             this.lblTitulo = new System.Windows.Forms.Label();
             this.txtNombreDepartamento = new System.Windows.Forms.TextBox();
             this.lblNombreDepartamento = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.cbAsignarU = new System.Windows.Forms.ComboBox();
             this.lblAsignarUsuario = new System.Windows.Forms.Button();
             this.cbEncargado = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -207,25 +205,6 @@
             this.lblNombreDepartamento.TabIndex = 31;
             this.lblNombreDepartamento.Text = "Nombre de Departamento:";
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(284, 101);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(114, 17);
-            this.label2.TabIndex = 43;
-            this.label2.Text = "Asignar Usuarios:";
-            // 
-            // cbAsignarU
-            // 
-            this.cbAsignarU.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbAsignarU.FormattingEnabled = true;
-            this.cbAsignarU.Location = new System.Drawing.Point(287, 133);
-            this.cbAsignarU.Name = "cbAsignarU";
-            this.cbAsignarU.Size = new System.Drawing.Size(199, 25);
-            this.cbAsignarU.TabIndex = 44;
-            // 
             // lblAsignarUsuario
             // 
             this.lblAsignarUsuario.BackColor = System.Drawing.Color.Turquoise;
@@ -234,7 +213,7 @@
             this.lblAsignarUsuario.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAsignarUsuario.ForeColor = System.Drawing.Color.Black;
             this.lblAsignarUsuario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblAsignarUsuario.Location = new System.Drawing.Point(288, 335);
+            this.lblAsignarUsuario.Location = new System.Drawing.Point(275, 374);
             this.lblAsignarUsuario.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.lblAsignarUsuario.Name = "lblAsignarUsuario";
             this.lblAsignarUsuario.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -246,9 +225,10 @@
             // 
             // cbEncargado
             // 
+            this.cbEncargado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbEncargado.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbEncargado.FormattingEnabled = true;
-            this.cbEncargado.Location = new System.Drawing.Point(287, 243);
+            this.cbEncargado.Location = new System.Drawing.Point(271, 131);
             this.cbEncargado.Name = "cbEncargado";
             this.cbEncargado.Size = new System.Drawing.Size(199, 25);
             this.cbEncargado.TabIndex = 46;
@@ -257,7 +237,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(284, 211);
+            this.label3.Location = new System.Drawing.Point(268, 101);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(205, 17);
             this.label3.TabIndex = 45;
@@ -271,8 +251,6 @@
             this.Controls.Add(this.cbEncargado);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.lblAsignarUsuario);
-            this.Controls.Add(this.cbAsignarU);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.pnlNavegacion);
             this.Controls.Add(this.txtDescripcion);
             this.Controls.Add(this.lblUsuariosAsignados);
@@ -280,6 +258,7 @@
             this.Controls.Add(this.txtNombreDepartamento);
             this.Controls.Add(this.lblNombreDepartamento);
             this.Name = "frmCrearDepartamentos";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmCrearDepartamentos";
             this.pnlNavegacion.ResumeLayout(false);
             this.pnlNavegacion.PerformLayout();
@@ -304,8 +283,6 @@
         private System.Windows.Forms.Label lblTitulo;
         private System.Windows.Forms.TextBox txtNombreDepartamento;
         private System.Windows.Forms.Label lblNombreDepartamento;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox cbAsignarU;
         private System.Windows.Forms.Button lblAsignarUsuario;
         private System.Windows.Forms.ComboBox cbEncargado;
         private System.Windows.Forms.Label label3;

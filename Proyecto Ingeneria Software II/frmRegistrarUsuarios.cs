@@ -118,5 +118,10 @@ namespace Proyecto_Ingeneria_Software_II
             conexion.Close();
             MessageBox.Show($"El usuario {user.Nombre} ha sido agregado con exito.");
         }
+
+        private void btnRegistrar_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }
