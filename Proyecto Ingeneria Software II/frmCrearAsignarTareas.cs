@@ -1,9 +1,11 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -50,18 +52,36 @@ namespace Proyecto_Ingeneria_Software_II
         private void btnCrearTarea_Click(object sender, EventArgs e)
         {
             tarea.Nombre = txtNombre.Text;
-            tarea.Descripcion= txtDescripcion.Text;
-            if (tarea.DepEncargado.Length > 0 & tarea.Descripcion.Length > 0  )
-            {
-                tarea.DepEncargado = cbDepEncargado.SelectedItem.ToString();
-            } else
-            {
-                MessageBox.Show("Debe completar los campos.");
-            }
-            
-            tarea.FechaInicio = dtpFechaInicio.Text;
-            tarea.FechaFinalizacion = dtpFechaFinalizacion.Text;
+            tarea.Descripcion = txtDescripcion.Text;
+            DateTime fecha_inicio = dtpFechaInicio.Value;
+            DateTime fecha_finalizacion = dtpFechaFinalizacion.Value;
+            tarea.FechaInicio = fecha_inicio.ToString("yyyy-MM-dd");
+            tarea.FechaFinalizacion = fecha_finalizacion.ToString("yyyy-MM-dd");
 
+            //MessageBox.Show(tarea.FechaInicio);
+            //MessageBox.Show(tarea.FechaFinalizacion);
+
+
+            MySqlConnection conexionBD = Conexion.conexion();
+            conexionBD.Open();
+            string sql = $"INSERT INTO tarea(nombre, descripcion, fecha_inicio, fecha_finalizacion) VALUES('{tarea.Nombre}', '{tarea.Descripcion}', '{tarea.FechaInicio}', '{tarea.FechaFinalizacion}')";
+
+            try
+            {
+                MySqlCommand consulta = new MySqlCommand(sql, conexionBD);
+                consulta.ExecuteNonQuery();
+
+                MessageBox.Show("Departamento creado con exito.");
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show($"Error al crear departamento: {ex.Message}");
+            }
+            finally
+            {
+                conexionBD.Close();
+                limpiar();
+            }
         }
 
         public void cargarDepartamentos()
@@ -81,6 +101,11 @@ namespace Proyecto_Ingeneria_Software_II
         private void frmCrearAsignarTareas_Load(object sender, EventArgs e)
         {
             cargarDepartamentos();
+        }
+
+        public void limpiar()
+        {
+
         }
     }
 }
