@@ -36,7 +36,7 @@
             this.btnRegistrarUsuarios = new System.Windows.Forms.Button();
             this.btnCrearDepartamentos = new System.Windows.Forms.Button();
             this.btnCrearAsigarTareas = new System.Windows.Forms.Button();
-            this.txtDescripcion = new System.Windows.Forms.TextBox();
+            this.txtUsuariosAsignados = new System.Windows.Forms.TextBox();
             this.lblUsuariosAsignados = new System.Windows.Forms.Label();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.txtNombreDepartamento = new System.Windows.Forms.TextBox();
@@ -154,15 +154,15 @@
             this.btnCrearAsigarTareas.UseVisualStyleBackColor = false;
             this.btnCrearAsigarTareas.Click += new System.EventHandler(this.btnCrearAsigarTareas_Click);
             // 
-            // txtDescripcion
+            // txtUsuariosAsignados
             // 
-            this.txtDescripcion.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDescripcion.Location = new System.Drawing.Point(505, 131);
-            this.txtDescripcion.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
-            this.txtDescripcion.Multiline = true;
-            this.txtDescripcion.Name = "txtDescripcion";
-            this.txtDescripcion.Size = new System.Drawing.Size(244, 286);
-            this.txtDescripcion.TabIndex = 35;
+            this.txtUsuariosAsignados.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUsuariosAsignados.Location = new System.Drawing.Point(505, 131);
+            this.txtUsuariosAsignados.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
+            this.txtUsuariosAsignados.Multiline = true;
+            this.txtUsuariosAsignados.Name = "txtUsuariosAsignados";
+            this.txtUsuariosAsignados.Size = new System.Drawing.Size(244, 286);
+            this.txtUsuariosAsignados.TabIndex = 35;
             // 
             // lblUsuariosAsignados
             // 
@@ -271,7 +271,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.lblAsignarUsuario);
             this.Controls.Add(this.pnlNavegacion);
-            this.Controls.Add(this.txtDescripcion);
+            this.Controls.Add(this.txtUsuariosAsignados);
             this.Controls.Add(this.lblUsuariosAsignados);
             this.Controls.Add(this.lblTitulo);
             this.Controls.Add(this.txtNombreDepartamento);
@@ -297,7 +297,7 @@
         private System.Windows.Forms.Button btnRegistrarUsuarios;
         private System.Windows.Forms.Button btnCrearDepartamentos;
         private System.Windows.Forms.Button btnCrearAsigarTareas;
-        private System.Windows.Forms.TextBox txtDescripcion;
+        private System.Windows.Forms.TextBox txtUsuariosAsignados;
         private System.Windows.Forms.Label lblUsuariosAsignados;
         private System.Windows.Forms.Label lblTitulo;
         private System.Windows.Forms.TextBox txtNombreDepartamento;

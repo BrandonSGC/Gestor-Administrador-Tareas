@@ -1,9 +1,11 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -12,6 +14,7 @@ namespace Proyecto_Ingeneria_Software_II
 {
     public partial class frmCrearDepartamentos : Form
     {
+        Departamento dep = new Departamento();
         public frmCrearDepartamentos()
         {
             InitializeComponent();
@@ -51,6 +54,32 @@ namespace Proyecto_Ingeneria_Software_II
         }
 
         private void btnCrearDepartamento_Click(object sender, EventArgs e)
+        {
+            dep.Nombre = txtNombreDepartamento.Text;
+
+            MySqlConnection conexionBD = Conexion.conexion();
+            conexionBD.Open();
+            string sql = $"INSERT INTO departamento(nombre) VALUES('{dep.Nombre}')";
+
+            try
+            {
+                MySqlCommand consulta = new MySqlCommand(sql, conexionBD);
+                consulta.ExecuteNonQuery();
+
+                MessageBox.Show("Departamento creado con exito.");
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show($"Error al crear departamento: {ex.Message}");
+            }
+            finally
+            {
+                conexionBD.Close();
+                limpiar();
+            }            
+        }
+
+        public void limpiar()
         {
 
         }

@@ -53,7 +53,7 @@ namespace Proyecto_Ingeneria_Software_II
 
             
             // Creamos la transaccion en SQL que vamos a hacer.
-            string sql = $"INSERT INTO usuario VALUES('{user.Cedula}', '{user.Nombre}', '{user.Apellidos}', '{user.Contrasena}', '{user.Email}', '{user.Telefono}', '{user.Puesto}')";
+            string sql = $"INSERT INTO usuario VALUES({user.Cedula}, '{user.Nombre}', '{user.Apellidos}', '{user.Contrasena}', '{user.Email}', {user.Telefono}, '{user.Puesto}')";
             // Instanciamos la conexion.
             MySqlConnection conexionBD = Conexion.conexion();
             // Luego abrimos la conexion.
