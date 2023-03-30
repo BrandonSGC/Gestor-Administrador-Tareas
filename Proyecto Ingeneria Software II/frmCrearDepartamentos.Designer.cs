@@ -44,6 +44,7 @@
             this.lblAsignarUsuario = new System.Windows.Forms.Button();
             this.cbEncargado = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.btnCrearDepartamento = new System.Windows.Forms.Button();
             this.pnlNavegacion.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbAtras)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -213,7 +214,7 @@
             this.lblAsignarUsuario.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAsignarUsuario.ForeColor = System.Drawing.Color.Black;
             this.lblAsignarUsuario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblAsignarUsuario.Location = new System.Drawing.Point(275, 374);
+            this.lblAsignarUsuario.Location = new System.Drawing.Point(271, 274);
             this.lblAsignarUsuario.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.lblAsignarUsuario.Name = "lblAsignarUsuario";
             this.lblAsignarUsuario.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -221,7 +222,6 @@
             this.lblAsignarUsuario.TabIndex = 16;
             this.lblAsignarUsuario.Text = "Asignar Usuarios";
             this.lblAsignarUsuario.UseVisualStyleBackColor = false;
-            this.lblAsignarUsuario.Click += new System.EventHandler(this.lblAsignarUsuario_Click);
             // 
             // cbEncargado
             // 
@@ -243,11 +243,30 @@
             this.label3.TabIndex = 45;
             this.label3.Text = "Encargado de departamento:";
             // 
+            // btnCrearDepartamento
+            // 
+            this.btnCrearDepartamento.BackColor = System.Drawing.Color.Turquoise;
+            this.btnCrearDepartamento.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCrearDepartamento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCrearDepartamento.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCrearDepartamento.ForeColor = System.Drawing.Color.Black;
+            this.btnCrearDepartamento.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCrearDepartamento.Location = new System.Drawing.Point(271, 354);
+            this.btnCrearDepartamento.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.btnCrearDepartamento.Name = "btnCrearDepartamento";
+            this.btnCrearDepartamento.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.btnCrearDepartamento.Size = new System.Drawing.Size(198, 41);
+            this.btnCrearDepartamento.TabIndex = 47;
+            this.btnCrearDepartamento.Text = "Crear Departamento";
+            this.btnCrearDepartamento.UseVisualStyleBackColor = false;
+            this.btnCrearDepartamento.Click += new System.EventHandler(this.btnCrearDepartamento_Click);
+            // 
             // frmCrearDepartamentos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(804, 429);
+            this.Controls.Add(this.btnCrearDepartamento);
             this.Controls.Add(this.cbEncargado);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.lblAsignarUsuario);
@@ -286,5 +305,6 @@
         private System.Windows.Forms.Button lblAsignarUsuario;
         private System.Windows.Forms.ComboBox cbEncargado;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button btnCrearDepartamento;
     }
 }

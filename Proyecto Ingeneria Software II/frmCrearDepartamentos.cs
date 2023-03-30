@@ -50,7 +50,7 @@ namespace Proyecto_Ingeneria_Software_II
             frmPantalla.Show();            
         }
 
-        private void lblAsignarUsuario_Click(object sender, EventArgs e)
+        private void btnCrearDepartamento_Click(object sender, EventArgs e)
         {
 
         }
