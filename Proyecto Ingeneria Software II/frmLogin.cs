@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -18,10 +19,44 @@ namespace Proyecto_Ingeneria_Software_II
         }
 
         private void btnIniciarSesion_Click(object sender, EventArgs e)
-        {
-            frmMenuPrincipal frmPantalla = new frmMenuPrincipal();
-            frmPantalla.Show();
-            this.Hide();
+        {;
+
+            string query = $"SELECT COUNT(*) FROM usuario WHERE cedula = {txtUsuario.Text} AND contrasena = '{txtContrasena.Text}'";
+            MySqlConnection conexionBD = Conexion.conexion();
+            conexionBD.Open();
+
+            try
+            {
+                MySqlCommand consulta = new MySqlCommand(query, conexionBD);
+
+                int result = Convert.ToInt32(consulta.ExecuteScalar());
+                if (result > 0)
+                {
+                    MessageBox.Show($"Se ha iniciado sesion correctamente.");
+                    frmMenuPrincipal frmPantalla = new frmMenuPrincipal();
+                    frmPantalla.Show();
+                    this.Hide();
+                }
+                else
+                {
+                    MessageBox.Show($"Datos invalidos, intentelo de nuevo.");
+                    limpiar();
+                }   
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show($"Ha ocurrido un error: {ex}");
+            }
+            finally
+            {
+                conexionBD.Close();
+            }            
         }
-    }
+
+        public void limpiar()
+        {
+            txtUsuario.Text = "";
+            txtContrasena.Text = "";            
+        }
+    } 
 }
