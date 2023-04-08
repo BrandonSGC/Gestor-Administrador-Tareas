@@ -87,7 +87,7 @@
             this.pbAtras.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbAtras.Image = ((System.Drawing.Image)(resources.GetObject("pbAtras.Image")));
             this.pbAtras.Location = new System.Drawing.Point(0, 4);
-            this.pbAtras.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pbAtras.Margin = new System.Windows.Forms.Padding(4);
             this.pbAtras.Name = "pbAtras";
             this.pbAtras.Size = new System.Drawing.Size(45, 34);
             this.pbAtras.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -270,7 +270,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(776, 430);
+            this.label2.Location = new System.Drawing.Point(776, 442);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(112, 16);
             this.label2.TabIndex = 43;
@@ -279,7 +279,7 @@
             // cbEstadoTarea
             // 
             this.cbEstadoTarea.FormattingEnabled = true;
-            this.cbEstadoTarea.Location = new System.Drawing.Point(898, 423);
+            this.cbEstadoTarea.Location = new System.Drawing.Point(898, 435);
             this.cbEstadoTarea.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbEstadoTarea.Name = "cbEstadoTarea";
             this.cbEstadoTarea.Size = new System.Drawing.Size(150, 24);
@@ -327,7 +327,7 @@
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.lblNombre);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmVerTareas";
             this.Text = "frmVerTareas";
             this.Load += new System.EventHandler(this.frmVerTareas_Load);

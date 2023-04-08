@@ -50,8 +50,8 @@
             this.lblEmail = new System.Windows.Forms.Label();
             this.txtTelefono = new System.Windows.Forms.TextBox();
             this.lblTelefono = new System.Windows.Forms.Label();
-            this.cbPuesto = new System.Windows.Forms.ComboBox();
             this.lblPuesto = new System.Windows.Forms.Label();
+            this.txtPuesto = new System.Windows.Forms.TextBox();
             this.cbDepartamento = new System.Windows.Forms.ComboBox();
             this.lblDepartamento = new System.Windows.Forms.Label();
             this.btnRegistrar = new System.Windows.Forms.Button();
@@ -297,16 +297,6 @@
             this.lblTelefono.TabIndex = 49;
             this.lblTelefono.Text = "Telefono:";
             // 
-            // cbPuesto
-            // 
-            this.cbPuesto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbPuesto.FormattingEnabled = true;
-            this.cbPuesto.Location = new System.Drawing.Point(470, 274);
-            this.cbPuesto.Margin = new System.Windows.Forms.Padding(5);
-            this.cbPuesto.Name = "cbPuesto";
-            this.cbPuesto.Size = new System.Drawing.Size(159, 25);
-            this.cbPuesto.TabIndex = 52;
-            // 
             // lblPuesto
             // 
             this.lblPuesto.AutoSize = true;
@@ -318,6 +308,14 @@
             this.lblPuesto.TabIndex = 51;
             this.lblPuesto.Text = "Puesto:";
             // 
+            // txtPuesto
+            // 
+            this.txtPuesto.Location = new System.Drawing.Point(470, 276);
+            this.txtPuesto.Margin = new System.Windows.Forms.Padding(5);
+            this.txtPuesto.Name = "txtPuesto";
+            this.txtPuesto.Size = new System.Drawing.Size(159, 23);
+            this.txtPuesto.TabIndex = 56;
+            // 
             // cbDepartamento
             // 
             this.cbDepartamento.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -326,7 +324,7 @@
             this.cbDepartamento.Margin = new System.Windows.Forms.Padding(5);
             this.cbDepartamento.Name = "cbDepartamento";
             this.cbDepartamento.Size = new System.Drawing.Size(159, 25);
-            this.cbDepartamento.TabIndex = 54;
+            this.cbDepartamento.TabIndex = 61;
             // 
             // lblDepartamento
             // 
@@ -336,19 +334,19 @@
             this.lblDepartamento.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblDepartamento.Name = "lblDepartamento";
             this.lblDepartamento.Size = new System.Drawing.Size(109, 17);
-            this.lblDepartamento.TabIndex = 53;
+            this.lblDepartamento.TabIndex = 60;
             this.lblDepartamento.Text = "Departamento:";
             // 
             // btnRegistrar
             // 
-            this.btnRegistrar.Location = new System.Drawing.Point(357, 359);
+            this.btnRegistrar.Location = new System.Drawing.Point(331, 360);
             this.btnRegistrar.Margin = new System.Windows.Forms.Padding(5);
             this.btnRegistrar.Name = "btnRegistrar";
             this.btnRegistrar.Size = new System.Drawing.Size(183, 41);
-            this.btnRegistrar.TabIndex = 55;
+            this.btnRegistrar.TabIndex = 62;
             this.btnRegistrar.Text = "Registrar";
             this.btnRegistrar.UseVisualStyleBackColor = true;
-            this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click_1);
+            this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
             // 
             // frmRegistrarUsuarios
             // 
@@ -359,7 +357,7 @@
             this.Controls.Add(this.btnRegistrar);
             this.Controls.Add(this.cbDepartamento);
             this.Controls.Add(this.lblDepartamento);
-            this.Controls.Add(this.cbPuesto);
+            this.Controls.Add(this.txtPuesto);
             this.Controls.Add(this.lblPuesto);
             this.Controls.Add(this.txtTelefono);
             this.Controls.Add(this.lblTelefono);
@@ -413,8 +411,8 @@
         private System.Windows.Forms.Label lblEmail;
         private System.Windows.Forms.TextBox txtTelefono;
         private System.Windows.Forms.Label lblTelefono;
-        private System.Windows.Forms.ComboBox cbPuesto;
         private System.Windows.Forms.Label lblPuesto;
+        private System.Windows.Forms.TextBox txtPuesto;
         private System.Windows.Forms.ComboBox cbDepartamento;
         private System.Windows.Forms.Label lblDepartamento;
         private System.Windows.Forms.Button btnRegistrar;

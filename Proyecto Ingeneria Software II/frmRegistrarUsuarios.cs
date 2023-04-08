@@ -19,29 +19,13 @@ namespace Proyecto_Ingeneria_Software_II
         {
             InitializeComponent();
         }
-        
-        public void cargarPuestos()
-        {
-            string[] puestos = new string[5];
-            puestos[0] = "Ingeniero Softwre";
-            puestos[1] = "Ingeniero Redes";
-            puestos[2] = "Contador";
-            puestos[3] = "Abogado";
-            puestos[4] = "Chef";
-            
-            for (int i=0; i < puestos.Length; i++)
-            {
-                cbPuesto.Items.Add(puestos[i]);
-            }
-        }
 
         private void frmRegistrarUsuarios_Load(object sender, EventArgs e)
         {
             cargarPuestos();
         }
 
-
-        private void btnRegistrar_Click_1(object sender, EventArgs e)
+        private void btnRegistrar_Click(object sender, EventArgs e)
         {
             user.Cedula = int.Parse(txtCedula.Text);
             user.Nombre = txtNombre.Text;
@@ -49,9 +33,9 @@ namespace Proyecto_Ingeneria_Software_II
             user.Contrasena = txtContrasena.Text;
             user.Email = txtEmail.Text;
             user.Telefono = int.Parse(txtTelefono.Text);
-            user.Puesto = cbPuesto.SelectedItem.ToString();
+            user.Puesto = txtPuesto.Text;
 
-            
+
             // Creamos la transaccion en SQL que vamos a hacer.
             string sql = $"INSERT INTO usuario VALUES({user.Cedula}, '{user.Nombre}', '{user.Apellidos}', '{user.Contrasena}', '{user.Email}', {user.Telefono}, '{user.Puesto}')";
             // Instanciamos la conexion.
@@ -59,7 +43,7 @@ namespace Proyecto_Ingeneria_Software_II
             // Luego abrimos la conexion.
             conexionBD.Open();
             try
-            {                
+            {
                 // Instanciamos la consulta con el parametro de la transaccion y la conexion.
                 MySqlCommand consulta = new MySqlCommand(sql, conexionBD);
                 // Ejecutamos la consulta
@@ -76,20 +60,8 @@ namespace Proyecto_Ingeneria_Software_II
                 conexionBD.Close();
                 limpiar();
             }
-
-
         }
 
-        private void limpiar()
-        {
-            txtCedula.Text = "";
-            txtNombre.Text = "";
-            txtApellidos.Text = "";
-            txtContrasena.Text = "";
-            txtEmail.Text = "";
-            txtTelefono.Text = "";
-            cbPuesto.SelectedItem = null;
-        }
 
         private void pbAtras_Click(object sender, EventArgs e)
         {
@@ -116,6 +88,48 @@ namespace Proyecto_Ingeneria_Software_II
             frmCrearAsignarTareas frmPantalla = new frmCrearAsignarTareas();
             frmPantalla.Show();
             this.Hide();
+        }
+
+        private void cargarPuestos()
+        {
+            MySqlConnection conexionBD = Conexion.conexion();
+
+            try
+            {
+                conexionBD.Open();
+                string sql = ("SELECT nombre FROM departamento");
+                MySqlCommand comando = new MySqlCommand(sql, conexionBD);
+
+                //MySqlDataAdapter adapter = new MySqlDataAdapter();
+                //adapter.SelectCommand = comando;
+
+                MySqlDataReader reader = comando.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    // Agregar el valor de la columna correspondiente al ComboBox
+                    cbDepartamento.Items.Add(reader.GetString(0));
+                }
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show($"Error al Mostrar los Datos: {ex}");
+            }
+            finally
+            {
+                conexionBD.Close();
+            }
+        }
+
+        private void limpiar()
+        {
+            txtCedula.Text = "";
+            txtNombre.Text = "";
+            txtApellidos.Text = "";
+            txtContrasena.Text = "";
+            txtEmail.Text = "";
+            txtTelefono.Text = "";
+            txtPuesto.Text = "";
         }
     }
 }
