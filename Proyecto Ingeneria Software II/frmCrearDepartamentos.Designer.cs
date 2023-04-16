@@ -41,7 +41,7 @@
             this.lblTitulo = new System.Windows.Forms.Label();
             this.txtNombreDepartamento = new System.Windows.Forms.TextBox();
             this.lblNombreDepartamento = new System.Windows.Forms.Label();
-            this.lblAsignarUsuario = new System.Windows.Forms.Button();
+            this.btnAsignarUsuario = new System.Windows.Forms.Button();
             this.cbEncargado = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.btnCrearDepartamento = new System.Windows.Forms.Button();
@@ -206,22 +206,23 @@
             this.lblNombreDepartamento.TabIndex = 31;
             this.lblNombreDepartamento.Text = "Nombre de Departamento:";
             // 
-            // lblAsignarUsuario
+            // btnAsignarUsuario
             // 
-            this.lblAsignarUsuario.BackColor = System.Drawing.Color.Turquoise;
-            this.lblAsignarUsuario.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lblAsignarUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblAsignarUsuario.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAsignarUsuario.ForeColor = System.Drawing.Color.Black;
-            this.lblAsignarUsuario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblAsignarUsuario.Location = new System.Drawing.Point(271, 274);
-            this.lblAsignarUsuario.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.lblAsignarUsuario.Name = "lblAsignarUsuario";
-            this.lblAsignarUsuario.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblAsignarUsuario.Size = new System.Drawing.Size(198, 41);
-            this.lblAsignarUsuario.TabIndex = 16;
-            this.lblAsignarUsuario.Text = "Asignar Usuarios";
-            this.lblAsignarUsuario.UseVisualStyleBackColor = false;
+            this.btnAsignarUsuario.BackColor = System.Drawing.Color.Turquoise;
+            this.btnAsignarUsuario.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAsignarUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAsignarUsuario.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAsignarUsuario.ForeColor = System.Drawing.Color.Black;
+            this.btnAsignarUsuario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAsignarUsuario.Location = new System.Drawing.Point(271, 274);
+            this.btnAsignarUsuario.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.btnAsignarUsuario.Name = "btnAsignarUsuario";
+            this.btnAsignarUsuario.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.btnAsignarUsuario.Size = new System.Drawing.Size(198, 41);
+            this.btnAsignarUsuario.TabIndex = 16;
+            this.btnAsignarUsuario.Text = "Asignar Usuarios";
+            this.btnAsignarUsuario.UseVisualStyleBackColor = false;
+            this.btnAsignarUsuario.Click += new System.EventHandler(this.btnAsignarUsuario_Click);
             // 
             // cbEncargado
             // 
@@ -269,7 +270,7 @@
             this.Controls.Add(this.btnCrearDepartamento);
             this.Controls.Add(this.cbEncargado);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.lblAsignarUsuario);
+            this.Controls.Add(this.btnAsignarUsuario);
             this.Controls.Add(this.pnlNavegacion);
             this.Controls.Add(this.txtUsuariosAsignados);
             this.Controls.Add(this.lblUsuariosAsignados);
@@ -279,6 +280,7 @@
             this.Name = "frmCrearDepartamentos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmCrearDepartamentos";
+            this.Load += new System.EventHandler(this.frmCrearDepartamentos_Load);
             this.pnlNavegacion.ResumeLayout(false);
             this.pnlNavegacion.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbAtras)).EndInit();
@@ -302,7 +304,7 @@
         private System.Windows.Forms.Label lblTitulo;
         private System.Windows.Forms.TextBox txtNombreDepartamento;
         private System.Windows.Forms.Label lblNombreDepartamento;
-        private System.Windows.Forms.Button lblAsignarUsuario;
+        private System.Windows.Forms.Button btnAsignarUsuario;
         private System.Windows.Forms.ComboBox cbEncargado;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnCrearDepartamento;

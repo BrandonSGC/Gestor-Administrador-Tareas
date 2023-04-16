@@ -1,4 +1,5 @@
 ﻿using MySql.Data.MySqlClient;
+using Mysqlx;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -54,19 +55,50 @@ namespace Proyecto_Ingeneria_Software_II
         }
 
         private void btnCrearDepartamento_Click(object sender, EventArgs e)
-        {
-            dep.Nombre = txtNombreDepartamento.Text;
-
-            MySqlConnection conexionBD = Conexion.conexion();
-            conexionBD.Open();
-            string sql = $"INSERT INTO departamento(nombre) VALUES('{dep.Nombre}')";
-
+        {            
+            MySqlConnection conexionBD = Conexion.conexion();                       
+            
             try
             {
-                MySqlCommand consulta = new MySqlCommand(sql, conexionBD);
+                conexionBD.Open();
+                // Obtenemos la cedula.
+                string sql = $"SELECT cedula FROM usuario WHERE CONCAT(nombre, ' ', apellidos) = '{cbEncargado.Text.ToString()}'";
+                MySqlCommand comando = new MySqlCommand(sql, conexionBD);
+
+
+                MySqlDataReader reader = comando.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    // Agregar el valor de la columna correspondiente al ComboBox.
+                    dep.ID_encargado = int.Parse(reader.GetString(0));
+                }
+
+                dep.Nombre = txtNombreDepartamento.Text;                
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show($"Se ha producido un error.");
+            }
+            finally
+            {
+                conexionBD.Close();
+                limpiar();
+            }
+
+            string sql2 = $"INSERT INTO departamento(nombre, id_encargado) VALUES('{dep.Nombre}', '{dep.ID_encargado}')";
+
+            MySqlConnection conexionBD2 = Conexion.conexion();
+
+            conexionBD2.Open();
+            try
+            {
+
+                MySqlCommand consulta = new MySqlCommand(sql2, conexionBD2);
+
                 consulta.ExecuteNonQuery();
 
-                MessageBox.Show("Departamento creado con exito.");
+                MessageBox.Show($"Departamento creado con exito.");
             }
             catch (MySqlException ex)
             {
@@ -74,14 +106,58 @@ namespace Proyecto_Ingeneria_Software_II
             }
             finally
             {
-                conexionBD.Close();
+                conexionBD2.Close();
                 limpiar();
-            }            
+            }
         }
 
         public void limpiar()
         {
+            txtNombreDepartamento.Text = "";
+            txtUsuariosAsignados.Text = "";
+        }
 
+
+
+        private void cargarEncargados()
+        {
+            MySqlConnection conexionBD = Conexion.conexion();
+
+            try
+            {
+                conexionBD.Open();
+                string sql = ("SELECT CONCAT(nombre, ' ', apellidos) AS nombre_completo FROM usuario");
+                MySqlCommand comando = new MySqlCommand(sql, conexionBD);
+
+                //MySqlDataAdapter adapter = new MySqlDataAdapter();
+                //adapter.SelectCommand = comando;
+
+                MySqlDataReader reader = comando.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    // Agregar el valor de la columna correspondiente al ComboBox
+                    cbEncargado.Items.Add(reader.GetString(0));
+                }
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show($"Error al Mostrar los Datos: {ex}");
+            }
+            finally
+            {
+                conexionBD.Close();
+            }
+        }
+
+        private void frmCrearDepartamentos_Load(object sender, EventArgs e)
+        {
+            cargarEncargados();
+        }
+
+        private void btnAsignarUsuario_Click(object sender, EventArgs e)
+        {
+            //txtUsuariosAsignados.Text = cbEncargado.Text.ToString();
         }
     }
 }

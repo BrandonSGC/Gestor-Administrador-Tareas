@@ -9,8 +9,7 @@ namespace Proyecto_Ingeneria_Software_II
     internal class Departamento
     {
         private string nombre;
-   
-
+        private int id_encargado;
 
         public string Nombre
         {
@@ -18,6 +17,12 @@ namespace Proyecto_Ingeneria_Software_II
             set { nombre = value; }
         }
 
-        
+        public int ID_encargado
+        {
+            get { return id_encargado; }
+            set { id_encargado = value; }
+        }
+
+            
     }  
 }
