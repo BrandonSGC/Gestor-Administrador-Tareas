@@ -58,9 +58,6 @@ namespace Proyecto_Ingeneria_Software_II
             tarea.FechaInicio = fecha_inicio.ToString("yyyy-MM-dd");
             tarea.FechaFinalizacion = fecha_finalizacion.ToString("yyyy-MM-dd");
 
-            //MessageBox.Show(tarea.FechaInicio);
-            //MessageBox.Show(tarea.FechaFinalizacion);
-
 
             MySqlConnection conexionBD = Conexion.conexion();
             conexionBD.Open();
@@ -71,11 +68,11 @@ namespace Proyecto_Ingeneria_Software_II
                 MySqlCommand consulta = new MySqlCommand(sql, conexionBD);
                 consulta.ExecuteNonQuery();
 
-                MessageBox.Show("Departamento creado con exito.");
+                MessageBox.Show("Tarea creada con exito.");
             }
             catch (MySqlException ex)
             {
-                MessageBox.Show($"Error al crear departamento: {ex.Message}");
+                MessageBox.Show($"Error al crear la tarea: {ex.Message}");
             }
             finally
             {
@@ -84,17 +81,34 @@ namespace Proyecto_Ingeneria_Software_II
             }
         }
 
-        public void cargarDepartamentos()
+        private void cargarDepartamentos()
         {
-            string[] departamentos = new string[3];
-            departamentos[0] = "Recursos Humanos";
-            departamentos[1] = "Contabilidad";
-            departamentos[2] = "Departamento de TI";
+            MySqlConnection conexionBD = Conexion.conexion();
 
-
-            for (int i = 0; i < departamentos.Length; i++)
+            try
             {
-                cbDepEncargado.Items.Add(departamentos[i]);
+                conexionBD.Open();
+                string sql = ("SELECT nombre FROM departamento");
+                MySqlCommand comando = new MySqlCommand(sql, conexionBD);
+
+                //MySqlDataAdapter adapter = new MySqlDataAdapter();
+                //adapter.SelectCommand = comando;
+
+                MySqlDataReader reader = comando.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    // Agregar el valor de la columna correspondiente al ComboBox
+                    cbDepEncargado.Items.Add(reader.GetString(0));
+                }
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show($"Error al Mostrar los Datos: {ex}");
+            }
+            finally
+            {
+                conexionBD.Close();
             }
         }
 
@@ -106,6 +120,13 @@ namespace Proyecto_Ingeneria_Software_II
         public void limpiar()
         {
 
+        }
+
+        private void btnVerTareas_Click(object sender, EventArgs e)
+        {
+            frmVerTareas frmPantalla = new frmVerTareas();
+            frmPantalla.Show();
+            this.Hide();
         }
     }
 }

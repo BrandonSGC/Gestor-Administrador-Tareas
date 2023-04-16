@@ -48,6 +48,7 @@
             this.btnRegistrarUsuarios = new System.Windows.Forms.Button();
             this.btnCrearDepartamentos = new System.Windows.Forms.Button();
             this.btnCrearAsigarTareas = new System.Windows.Forms.Button();
+            this.btnVerTareas = new System.Windows.Forms.Button();
             this.pnlNavegacion.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbAtras)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -170,6 +171,7 @@
             // pnlNavegacion
             // 
             this.pnlNavegacion.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.pnlNavegacion.Controls.Add(this.btnVerTareas);
             this.pnlNavegacion.Controls.Add(this.label1);
             this.pnlNavegacion.Controls.Add(this.pbAtras);
             this.pnlNavegacion.Controls.Add(this.pictureBox1);
@@ -224,7 +226,7 @@
             this.btnRegistrarUsuarios.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegistrarUsuarios.ForeColor = System.Drawing.Color.Black;
             this.btnRegistrarUsuarios.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRegistrarUsuarios.Location = new System.Drawing.Point(12, 213);
+            this.btnRegistrarUsuarios.Location = new System.Drawing.Point(12, 195);
             this.btnRegistrarUsuarios.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.btnRegistrarUsuarios.Name = "btnRegistrarUsuarios";
             this.btnRegistrarUsuarios.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -242,7 +244,7 @@
             this.btnCrearDepartamentos.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCrearDepartamentos.ForeColor = System.Drawing.Color.Black;
             this.btnCrearDepartamentos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCrearDepartamentos.Location = new System.Drawing.Point(12, 274);
+            this.btnCrearDepartamentos.Location = new System.Drawing.Point(12, 256);
             this.btnCrearDepartamentos.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.btnCrearDepartamentos.Name = "btnCrearDepartamentos";
             this.btnCrearDepartamentos.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -260,7 +262,7 @@
             this.btnCrearAsigarTareas.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCrearAsigarTareas.ForeColor = System.Drawing.Color.Black;
             this.btnCrearAsigarTareas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCrearAsigarTareas.Location = new System.Drawing.Point(12, 335);
+            this.btnCrearAsigarTareas.Location = new System.Drawing.Point(12, 317);
             this.btnCrearAsigarTareas.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.btnCrearAsigarTareas.Name = "btnCrearAsigarTareas";
             this.btnCrearAsigarTareas.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -269,6 +271,24 @@
             this.btnCrearAsigarTareas.Text = "Crear y Asignar Tareas";
             this.btnCrearAsigarTareas.UseVisualStyleBackColor = false;
             this.btnCrearAsigarTareas.Click += new System.EventHandler(this.btnCrearAsigarTareas_Click);
+            // 
+            // btnVerTareas
+            // 
+            this.btnVerTareas.BackColor = System.Drawing.Color.Turquoise;
+            this.btnVerTareas.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnVerTareas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVerTareas.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVerTareas.ForeColor = System.Drawing.Color.Black;
+            this.btnVerTareas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnVerTareas.Location = new System.Drawing.Point(12, 374);
+            this.btnVerTareas.Margin = new System.Windows.Forms.Padding(5);
+            this.btnVerTareas.Name = "btnVerTareas";
+            this.btnVerTareas.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.btnVerTareas.Size = new System.Drawing.Size(196, 41);
+            this.btnVerTareas.TabIndex = 16;
+            this.btnVerTareas.Text = "Ver Tareas";
+            this.btnVerTareas.UseVisualStyleBackColor = false;
+            this.btnVerTareas.Click += new System.EventHandler(this.btnVerTareas_Click);
             // 
             // frmCrearAsignarTareas
             // 
@@ -324,5 +344,6 @@
         private System.Windows.Forms.Button btnCrearDepartamentos;
         private System.Windows.Forms.Button btnCrearAsigarTareas;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnVerTareas;
     }
 }

@@ -22,7 +22,7 @@ namespace Proyecto_Ingeneria_Software_II
 
         private void frmRegistrarUsuarios_Load(object sender, EventArgs e)
         {
-            cargarPuestos();
+            cargarDepartamentos();
         }
 
         private void btnRegistrar_Click(object sender, EventArgs e)
@@ -90,7 +90,7 @@ namespace Proyecto_Ingeneria_Software_II
             this.Hide();
         }
 
-        private void cargarPuestos()
+        private void cargarDepartamentos()
         {
             MySqlConnection conexionBD = Conexion.conexion();
 
@@ -130,6 +130,13 @@ namespace Proyecto_Ingeneria_Software_II
             txtEmail.Text = "";
             txtTelefono.Text = "";
             txtPuesto.Text = "";
+        }
+
+        private void btnVerTareas_Click(object sender, EventArgs e)
+        {
+            frmVerTareas frmPantalla = new frmVerTareas();
+            frmPantalla.Show();
+            this.Hide();
         }
     }
 }

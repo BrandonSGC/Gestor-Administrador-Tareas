@@ -51,6 +51,7 @@
             this.cbEstadoTarea = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.btnVerTareas = new System.Windows.Forms.Button();
             this.pnlNavegacion.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbAtras)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -59,6 +60,7 @@
             // pnlNavegacion
             // 
             this.pnlNavegacion.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.pnlNavegacion.Controls.Add(this.btnVerTareas);
             this.pnlNavegacion.Controls.Add(this.label1);
             this.pnlNavegacion.Controls.Add(this.pbAtras);
             this.pnlNavegacion.Controls.Add(this.pictureBox1);
@@ -132,7 +134,7 @@
             this.btnCrearDepartamentos.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCrearDepartamentos.ForeColor = System.Drawing.Color.Black;
             this.btnCrearDepartamentos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCrearDepartamentos.Location = new System.Drawing.Point(11, 312);
+            this.btnCrearDepartamentos.Location = new System.Drawing.Point(12, 298);
             this.btnCrearDepartamentos.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnCrearDepartamentos.Name = "btnCrearDepartamentos";
             this.btnCrearDepartamentos.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -150,7 +152,7 @@
             this.btnCrearAsigarTareas.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCrearAsigarTareas.ForeColor = System.Drawing.Color.Black;
             this.btnCrearAsigarTareas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCrearAsigarTareas.Location = new System.Drawing.Point(11, 386);
+            this.btnCrearAsigarTareas.Location = new System.Drawing.Point(12, 360);
             this.btnCrearAsigarTareas.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnCrearAsigarTareas.Name = "btnCrearAsigarTareas";
             this.btnCrearAsigarTareas.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -305,6 +307,24 @@
             this.textBox1.TabIndex = 46;
             this.textBox1.Text = "Jazmin Solano Serrano, Brandon Gomez Carvajal";
             // 
+            // btnVerTareas
+            // 
+            this.btnVerTareas.BackColor = System.Drawing.Color.Turquoise;
+            this.btnVerTareas.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnVerTareas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVerTareas.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVerTareas.ForeColor = System.Drawing.Color.Black;
+            this.btnVerTareas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnVerTareas.Location = new System.Drawing.Point(13, 421);
+            this.btnVerTareas.Margin = new System.Windows.Forms.Padding(5);
+            this.btnVerTareas.Name = "btnVerTareas";
+            this.btnVerTareas.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.btnVerTareas.Size = new System.Drawing.Size(263, 53);
+            this.btnVerTareas.TabIndex = 16;
+            this.btnVerTareas.Text = "Ver Tareas";
+            this.btnVerTareas.UseVisualStyleBackColor = false;
+            this.btnVerTareas.Click += new System.EventHandler(this.btnVerTareas_Click);
+            // 
             // frmVerTareas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -364,5 +384,6 @@
         private System.Windows.Forms.ComboBox cbEstadoTarea;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button btnVerTareas;
     }
 }

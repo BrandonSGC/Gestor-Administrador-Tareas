@@ -68,5 +68,12 @@ namespace Proyecto_Ingeneria_Software_II
             frmPantalla.Show();
             this.Hide();
         }
+
+        private void btnVerTareas_Click(object sender, EventArgs e)
+        {
+            frmVerTareas frmPantalla = new frmVerTareas();
+            frmPantalla.Show();
+            this.Hide();
+        }
     }
 }
