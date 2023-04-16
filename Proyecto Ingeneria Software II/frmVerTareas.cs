@@ -118,11 +118,10 @@ namespace Proyecto_Ingeneria_Software_II
                     {
                         txtNombre.Text = reader.GetString(0);
                         txtDescripcion.Text = reader.GetString(1);
-                        cbDepEncargado.Text = reader.GetString(2);
+                        txtDepEncargado.Text = reader.GetString(2);
                         string fehcaInicio = reader.GetString(3);
                         DateTime fecha = DateTime.ParseExact(fehcaInicio, "M/d/yyyy h:mm:ss tt", CultureInfo.InvariantCulture);
                         dtpFechaInicio.Value = fecha.Date;
-
                         string fechaFinalizacion = reader.GetString(4);
                         DateTime fecha2 = DateTime.ParseExact(fechaFinalizacion, "M/d/yyyy h:mm:ss tt", CultureInfo.InvariantCulture);
                         dtpFechaFinalizacion.Value = fecha2.Date;
@@ -152,7 +151,6 @@ namespace Proyecto_Ingeneria_Software_II
             DateTime fechaFin = dtpFechaFinalizacion.Value;
 
             TimeSpan intervalo = fechaFin.Subtract(fechaInicio);
-            MessageBox.Show(intervalo.ToString());
 
             if (intervalo.TotalDays <= 0)
             {
@@ -174,6 +172,11 @@ namespace Proyecto_Ingeneria_Software_II
                 // La tarea está realizada
                 cbEstadoTarea.Text = "Realizado";
             }
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

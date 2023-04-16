@@ -47,13 +47,13 @@
             this.dtpFechaFinalizacion = new System.Windows.Forms.DateTimePicker();
             this.lblFechaFinalizacion = new System.Windows.Forms.Label();
             this.dtpFechaInicio = new System.Windows.Forms.DateTimePicker();
-            this.cbDepEncargado = new System.Windows.Forms.ComboBox();
             this.lblDepEncargado = new System.Windows.Forms.Label();
             this.lblFechaInicio = new System.Windows.Forms.Label();
             this.txtDescripcion = new System.Windows.Forms.TextBox();
             this.lblDescripcion = new System.Windows.Forms.Label();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.lblNombre = new System.Windows.Forms.Label();
+            this.txtDepEncargado = new System.Windows.Forms.TextBox();
             this.pnlNavegacion.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbAtras)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -233,12 +233,12 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.LightGray;
+            this.panel1.Controls.Add(this.txtDepEncargado);
             this.panel1.Controls.Add(this.cbEstadoTarea);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.dtpFechaFinalizacion);
             this.panel1.Controls.Add(this.lblFechaFinalizacion);
             this.panel1.Controls.Add(this.dtpFechaInicio);
-            this.panel1.Controls.Add(this.cbDepEncargado);
             this.panel1.Controls.Add(this.lblDepEncargado);
             this.panel1.Controls.Add(this.lblFechaInicio);
             this.panel1.Controls.Add(this.txtDescripcion);
@@ -247,8 +247,9 @@
             this.panel1.Controls.Add(this.lblNombre);
             this.panel1.Location = new System.Drawing.Point(342, 89);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(672, 493);
+            this.panel1.Size = new System.Drawing.Size(682, 501);
             this.panel1.TabIndex = 51;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // cbEstadoTarea
             // 
@@ -294,15 +295,6 @@
             this.dtpFechaInicio.Name = "dtpFechaInicio";
             this.dtpFechaInicio.Size = new System.Drawing.Size(353, 22);
             this.dtpFechaInicio.TabIndex = 54;
-            // 
-            // cbDepEncargado
-            // 
-            this.cbDepEncargado.FormattingEnabled = true;
-            this.cbDepEncargado.Location = new System.Drawing.Point(213, 213);
-            this.cbDepEncargado.Margin = new System.Windows.Forms.Padding(7, 4, 7, 4);
-            this.cbDepEncargado.Name = "cbDepEncargado";
-            this.cbDepEncargado.Size = new System.Drawing.Size(282, 24);
-            this.cbDepEncargado.TabIndex = 53;
             // 
             // lblDepEncargado
             // 
@@ -361,6 +353,14 @@
             this.lblNombre.TabIndex = 47;
             this.lblNombre.Text = "Nombre de Tarea:";
             // 
+            // txtDepEncargado
+            // 
+            this.txtDepEncargado.Location = new System.Drawing.Point(213, 215);
+            this.txtDepEncargado.Margin = new System.Windows.Forms.Padding(7, 4, 7, 4);
+            this.txtDepEncargado.Name = "txtDepEncargado";
+            this.txtDepEncargado.Size = new System.Drawing.Size(196, 22);
+            this.txtDepEncargado.TabIndex = 52;
+            // 
             // frmVerTareas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -410,12 +410,12 @@
         private System.Windows.Forms.DateTimePicker dtpFechaFinalizacion;
         private System.Windows.Forms.Label lblFechaFinalizacion;
         private System.Windows.Forms.DateTimePicker dtpFechaInicio;
-        private System.Windows.Forms.ComboBox cbDepEncargado;
         private System.Windows.Forms.Label lblDepEncargado;
         private System.Windows.Forms.Label lblFechaInicio;
         private System.Windows.Forms.TextBox txtDescripcion;
         private System.Windows.Forms.Label lblDescripcion;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Label lblNombre;
+        private System.Windows.Forms.TextBox txtDepEncargado;
     }
 }
