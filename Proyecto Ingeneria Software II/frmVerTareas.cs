@@ -21,7 +21,7 @@ namespace Proyecto_Ingeneria_Software_II
 
         private void frmVerTareas_Load(object sender, EventArgs e)
         {
-            cargarEstados();
+            cargarEstados();            
         }
 
         private void lblTitulo_Click(object sender, EventArgs e)
@@ -126,6 +126,7 @@ namespace Proyecto_Ingeneria_Software_II
                         string fechaFinalizacion = reader.GetString(4);
                         DateTime fecha2 = DateTime.ParseExact(fechaFinalizacion, "M/d/yyyy h:mm:ss tt", CultureInfo.InvariantCulture);
                         dtpFechaFinalizacion.Value = fecha2.Date;
+                        calcularEstadosTarea();
                     }
                 }
                 else
@@ -140,6 +141,38 @@ namespace Proyecto_Ingeneria_Software_II
             finally
             {
                 conexionBD.Close();
+            }
+        }
+
+        public void calcularEstadosTarea()
+        {
+            Tarea tarea = new Tarea();
+
+            DateTime fechaInicio = dtpFechaInicio.Value;
+            DateTime fechaFin = dtpFechaFinalizacion.Value;
+
+            TimeSpan intervalo = fechaFin.Subtract(fechaInicio);
+            MessageBox.Show(intervalo.ToString());
+
+            if (intervalo.TotalDays <= 0)
+            {
+                // La tarea está asignada
+                cbEstadoTarea.Text = "Asignado";
+            }
+            else if (intervalo.TotalDays <= 7)
+            {
+                // La tarea está en proceso
+                cbEstadoTarea.Text = "En proceso";
+            }
+            else if (intervalo.TotalDays <= 14)
+            {
+                // La tarea está en espera de
+                cbEstadoTarea.Text = "En espera de";
+            }
+            else
+            {
+                // La tarea está realizada
+                cbEstadoTarea.Text = "Realizado";
             }
         }
     }

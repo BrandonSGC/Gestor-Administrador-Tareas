@@ -114,10 +114,7 @@ namespace Proyecto_Ingeneria_Software_II
         public void limpiar()
         {
             txtNombreDepartamento.Text = "";
-            txtUsuariosAsignados.Text = "";
         }
-
-
 
         private void cargarEncargados()
         {
@@ -153,11 +150,6 @@ namespace Proyecto_Ingeneria_Software_II
         private void frmCrearDepartamentos_Load(object sender, EventArgs e)
         {
             cargarEncargados();
-        }
-
-        private void btnAsignarUsuario_Click(object sender, EventArgs e)
-        {
-            //txtUsuariosAsignados.Text = cbEncargado.Text.ToString();
         }
 
         private void btnVerTareas_Click(object sender, EventArgs e)

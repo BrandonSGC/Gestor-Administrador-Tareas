@@ -30,22 +30,19 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCrearDepartamentos));
             this.pnlNavegacion = new System.Windows.Forms.Panel();
+            this.btnVerTareas = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.pbAtras = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnRegistrarUsuarios = new System.Windows.Forms.Button();
             this.btnCrearDepartamentos = new System.Windows.Forms.Button();
             this.btnCrearAsigarTareas = new System.Windows.Forms.Button();
-            this.txtUsuariosAsignados = new System.Windows.Forms.TextBox();
-            this.lblUsuariosAsignados = new System.Windows.Forms.Label();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.txtNombreDepartamento = new System.Windows.Forms.TextBox();
             this.lblNombreDepartamento = new System.Windows.Forms.Label();
-            this.btnAsignarUsuario = new System.Windows.Forms.Button();
             this.cbEncargado = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.btnCrearDepartamento = new System.Windows.Forms.Button();
-            this.btnVerTareas = new System.Windows.Forms.Button();
             this.pnlNavegacion.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbAtras)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -67,6 +64,24 @@
             this.pnlNavegacion.Size = new System.Drawing.Size(221, 429);
             this.pnlNavegacion.TabIndex = 42;
             this.pnlNavegacion.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlNavegacion_Paint);
+            // 
+            // btnVerTareas
+            // 
+            this.btnVerTareas.BackColor = System.Drawing.Color.Turquoise;
+            this.btnVerTareas.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnVerTareas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVerTareas.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVerTareas.ForeColor = System.Drawing.Color.Black;
+            this.btnVerTareas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnVerTareas.Location = new System.Drawing.Point(12, 365);
+            this.btnVerTareas.Margin = new System.Windows.Forms.Padding(5);
+            this.btnVerTareas.Name = "btnVerTareas";
+            this.btnVerTareas.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.btnVerTareas.Size = new System.Drawing.Size(196, 41);
+            this.btnVerTareas.TabIndex = 48;
+            this.btnVerTareas.Text = "Ver Tareas";
+            this.btnVerTareas.UseVisualStyleBackColor = false;
+            this.btnVerTareas.Click += new System.EventHandler(this.btnVerTareas_Click);
             // 
             // label1
             // 
@@ -156,27 +171,6 @@
             this.btnCrearAsigarTareas.UseVisualStyleBackColor = false;
             this.btnCrearAsigarTareas.Click += new System.EventHandler(this.btnCrearAsigarTareas_Click);
             // 
-            // txtUsuariosAsignados
-            // 
-            this.txtUsuariosAsignados.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsuariosAsignados.Location = new System.Drawing.Point(505, 131);
-            this.txtUsuariosAsignados.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
-            this.txtUsuariosAsignados.Multiline = true;
-            this.txtUsuariosAsignados.Name = "txtUsuariosAsignados";
-            this.txtUsuariosAsignados.Size = new System.Drawing.Size(244, 286);
-            this.txtUsuariosAsignados.TabIndex = 35;
-            // 
-            // lblUsuariosAsignados
-            // 
-            this.lblUsuariosAsignados.AutoSize = true;
-            this.lblUsuariosAsignados.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsuariosAsignados.Location = new System.Drawing.Point(502, 101);
-            this.lblUsuariosAsignados.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.lblUsuariosAsignados.Name = "lblUsuariosAsignados";
-            this.lblUsuariosAsignados.Size = new System.Drawing.Size(247, 17);
-            this.lblUsuariosAsignados.TabIndex = 34;
-            this.lblUsuariosAsignados.Text = "Usuarios Asignados a Departamento:";
-            // 
             // lblTitulo
             // 
             this.lblTitulo.AutoSize = true;
@@ -208,30 +202,12 @@
             this.lblNombreDepartamento.TabIndex = 31;
             this.lblNombreDepartamento.Text = "Nombre de Departamento:";
             // 
-            // btnAsignarUsuario
-            // 
-            this.btnAsignarUsuario.BackColor = System.Drawing.Color.Turquoise;
-            this.btnAsignarUsuario.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAsignarUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAsignarUsuario.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAsignarUsuario.ForeColor = System.Drawing.Color.Black;
-            this.btnAsignarUsuario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAsignarUsuario.Location = new System.Drawing.Point(271, 274);
-            this.btnAsignarUsuario.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.btnAsignarUsuario.Name = "btnAsignarUsuario";
-            this.btnAsignarUsuario.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.btnAsignarUsuario.Size = new System.Drawing.Size(198, 41);
-            this.btnAsignarUsuario.TabIndex = 16;
-            this.btnAsignarUsuario.Text = "Asignar Usuarios";
-            this.btnAsignarUsuario.UseVisualStyleBackColor = false;
-            this.btnAsignarUsuario.Click += new System.EventHandler(this.btnAsignarUsuario_Click);
-            // 
             // cbEncargado
             // 
             this.cbEncargado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbEncargado.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbEncargado.FormattingEnabled = true;
-            this.cbEncargado.Location = new System.Drawing.Point(271, 131);
+            this.cbEncargado.Location = new System.Drawing.Point(253, 133);
             this.cbEncargado.Name = "cbEncargado";
             this.cbEncargado.Size = new System.Drawing.Size(199, 25);
             this.cbEncargado.TabIndex = 46;
@@ -240,7 +216,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(268, 101);
+            this.label3.Location = new System.Drawing.Point(250, 103);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(205, 17);
             this.label3.TabIndex = 45;
@@ -254,7 +230,7 @@
             this.btnCrearDepartamento.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCrearDepartamento.ForeColor = System.Drawing.Color.Black;
             this.btnCrearDepartamento.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCrearDepartamento.Location = new System.Drawing.Point(271, 354);
+            this.btnCrearDepartamento.Location = new System.Drawing.Point(257, 166);
             this.btnCrearDepartamento.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.btnCrearDepartamento.Name = "btnCrearDepartamento";
             this.btnCrearDepartamento.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -264,24 +240,6 @@
             this.btnCrearDepartamento.UseVisualStyleBackColor = false;
             this.btnCrearDepartamento.Click += new System.EventHandler(this.btnCrearDepartamento_Click);
             // 
-            // btnVerTareas
-            // 
-            this.btnVerTareas.BackColor = System.Drawing.Color.Turquoise;
-            this.btnVerTareas.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnVerTareas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVerTareas.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVerTareas.ForeColor = System.Drawing.Color.Black;
-            this.btnVerTareas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnVerTareas.Location = new System.Drawing.Point(12, 365);
-            this.btnVerTareas.Margin = new System.Windows.Forms.Padding(5);
-            this.btnVerTareas.Name = "btnVerTareas";
-            this.btnVerTareas.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.btnVerTareas.Size = new System.Drawing.Size(196, 41);
-            this.btnVerTareas.TabIndex = 48;
-            this.btnVerTareas.Text = "Ver Tareas";
-            this.btnVerTareas.UseVisualStyleBackColor = false;
-            this.btnVerTareas.Click += new System.EventHandler(this.btnVerTareas_Click);
-            // 
             // frmCrearDepartamentos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -290,10 +248,7 @@
             this.Controls.Add(this.btnCrearDepartamento);
             this.Controls.Add(this.cbEncargado);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.btnAsignarUsuario);
             this.Controls.Add(this.pnlNavegacion);
-            this.Controls.Add(this.txtUsuariosAsignados);
-            this.Controls.Add(this.lblUsuariosAsignados);
             this.Controls.Add(this.lblTitulo);
             this.Controls.Add(this.txtNombreDepartamento);
             this.Controls.Add(this.lblNombreDepartamento);
@@ -319,12 +274,9 @@
         private System.Windows.Forms.Button btnRegistrarUsuarios;
         private System.Windows.Forms.Button btnCrearDepartamentos;
         private System.Windows.Forms.Button btnCrearAsigarTareas;
-        private System.Windows.Forms.TextBox txtUsuariosAsignados;
-        private System.Windows.Forms.Label lblUsuariosAsignados;
         private System.Windows.Forms.Label lblTitulo;
         private System.Windows.Forms.TextBox txtNombreDepartamento;
         private System.Windows.Forms.Label lblNombreDepartamento;
-        private System.Windows.Forms.Button btnAsignarUsuario;
         private System.Windows.Forms.ComboBox cbEncargado;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnCrearDepartamento;

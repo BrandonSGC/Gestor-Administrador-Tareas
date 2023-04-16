@@ -245,9 +245,9 @@
             this.panel1.Controls.Add(this.lblDescripcion);
             this.panel1.Controls.Add(this.txtNombre);
             this.panel1.Controls.Add(this.lblNombre);
-            this.panel1.Location = new System.Drawing.Point(322, 107);
+            this.panel1.Location = new System.Drawing.Point(342, 89);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(709, 493);
+            this.panel1.Size = new System.Drawing.Size(672, 493);
             this.panel1.TabIndex = 51;
             // 
             // cbEstadoTarea
