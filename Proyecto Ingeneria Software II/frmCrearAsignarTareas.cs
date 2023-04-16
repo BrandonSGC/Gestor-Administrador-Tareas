@@ -57,11 +57,11 @@ namespace Proyecto_Ingeneria_Software_II
             DateTime fecha_finalizacion = dtpFechaFinalizacion.Value;
             tarea.FechaInicio = fecha_inicio.ToString("yyyy-MM-dd");
             tarea.FechaFinalizacion = fecha_finalizacion.ToString("yyyy-MM-dd");
-
+            tarea.DepEncargado = cbDepEncargado.Text.ToString();
 
             MySqlConnection conexionBD = Conexion.conexion();
             conexionBD.Open();
-            string sql = $"INSERT INTO tarea(nombre, descripcion, fecha_inicio, fecha_finalizacion) VALUES('{tarea.Nombre}', '{tarea.Descripcion}', '{tarea.FechaInicio}', '{tarea.FechaFinalizacion}')";
+            string sql = $"INSERT INTO tarea(nombre, descripcion, dep_encargado, fecha_inicio, fecha_finalizacion) VALUES('{tarea.Nombre}', '{tarea.Descripcion}', '{tarea.DepEncargado}', '{tarea.FechaInicio}', '{tarea.FechaFinalizacion}')";
 
             try
             {
