@@ -32,14 +32,19 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.pnlNavegacion = new System.Windows.Forms.Panel();
+            this.btnVerTareas = new System.Windows.Forms.Button();
             this.lblNombreUsuario = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnRegistrarUsuarios = new System.Windows.Forms.Button();
             this.btnCrearDepartamentos = new System.Windows.Forms.Button();
             this.btnCrearAsigarTareas = new System.Windows.Forms.Button();
-            this.btnVerTareas = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pnlNavegacion.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -59,7 +64,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(287, 201);
+            this.label2.Location = new System.Drawing.Point(288, 100);
             this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(480, 20);
@@ -81,16 +86,34 @@
             this.pnlNavegacion.Size = new System.Drawing.Size(222, 431);
             this.pnlNavegacion.TabIndex = 14;
             // 
+            // btnVerTareas
+            // 
+            this.btnVerTareas.BackColor = System.Drawing.Color.Turquoise;
+            this.btnVerTareas.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnVerTareas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVerTareas.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVerTareas.ForeColor = System.Drawing.Color.Black;
+            this.btnVerTareas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnVerTareas.Location = new System.Drawing.Point(14, 362);
+            this.btnVerTareas.Margin = new System.Windows.Forms.Padding(5);
+            this.btnVerTareas.Name = "btnVerTareas";
+            this.btnVerTareas.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.btnVerTareas.Size = new System.Drawing.Size(196, 41);
+            this.btnVerTareas.TabIndex = 5;
+            this.btnVerTareas.Text = "Ver Tareas";
+            this.btnVerTareas.UseVisualStyleBackColor = false;
+            this.btnVerTareas.Click += new System.EventHandler(this.btnVerTareas_Click);
+            // 
             // lblNombreUsuario
             // 
             this.lblNombreUsuario.AutoSize = true;
             this.lblNombreUsuario.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombreUsuario.Location = new System.Drawing.Point(73, 134);
+            this.lblNombreUsuario.Location = new System.Drawing.Point(78, 135);
             this.lblNombreUsuario.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblNombreUsuario.Name = "lblNombreUsuario";
-            this.lblNombreUsuario.Size = new System.Drawing.Size(71, 17);
+            this.lblNombreUsuario.Size = new System.Drawing.Size(62, 17);
             this.lblNombreUsuario.TabIndex = 4;
-            this.lblNombreUsuario.Text = "username";
+            this.lblNombreUsuario.Text = "Brandon";
             // 
             // pictureBox1
             // 
@@ -157,23 +180,48 @@
             this.btnCrearAsigarTareas.UseVisualStyleBackColor = false;
             this.btnCrearAsigarTareas.Click += new System.EventHandler(this.btnCrearAsigarTareas_Click_1);
             // 
-            // btnVerTareas
+            // label3
             // 
-            this.btnVerTareas.BackColor = System.Drawing.Color.Turquoise;
-            this.btnVerTareas.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnVerTareas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVerTareas.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVerTareas.ForeColor = System.Drawing.Color.Black;
-            this.btnVerTareas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnVerTareas.Location = new System.Drawing.Point(14, 362);
-            this.btnVerTareas.Margin = new System.Windows.Forms.Padding(5);
-            this.btnVerTareas.Name = "btnVerTareas";
-            this.btnVerTareas.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.btnVerTareas.Size = new System.Drawing.Size(196, 41);
-            this.btnVerTareas.TabIndex = 5;
-            this.btnVerTareas.Text = "Ver Tareas";
-            this.btnVerTareas.UseVisualStyleBackColor = false;
-            this.btnVerTareas.Click += new System.EventHandler(this.btnVerTareas_Click);
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(430, 320);
+            this.label3.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(180, 20);
+            this.label3.TabIndex = 15;
+            this.label3.Text = "Proyecto realizado por:";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(418, 362);
+            this.label4.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(203, 20);
+            this.label4.TabIndex = 16;
+            this.label4.Text = "- Brandon Gómez Carvajal";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(418, 383);
+            this.label6.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(179, 20);
+            this.label6.TabIndex = 18;
+            this.label6.Text = "- Jazmín Solano Serrano";
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::Proyecto_Ingeneria_Software_II.Properties.Resources.CUC;
+            this.pictureBox2.Location = new System.Drawing.Point(461, 150);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(117, 142);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 19;
+            this.pictureBox2.TabStop = false;
             // 
             // frmMenuPrincipal
             // 
@@ -181,6 +229,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(845, 430);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.pnlNavegacion);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -189,10 +241,10 @@
             this.Name = "frmMenuPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu Principal";
-            this.Load += new System.EventHandler(this.frmMenuPrincipal_Load);
             this.pnlNavegacion.ResumeLayout(false);
             this.pnlNavegacion.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -208,6 +260,10 @@
         private System.Windows.Forms.Button btnCrearDepartamentos;
         private System.Windows.Forms.Button btnCrearAsigarTareas;
         private System.Windows.Forms.Button btnVerTareas;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }
 

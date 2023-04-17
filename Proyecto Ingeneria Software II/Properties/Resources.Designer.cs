@@ -59,5 +59,15 @@ namespace Proyecto_Ingeneria_Software_II.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap CUC {
+            get {
+                object obj = ResourceManager.GetObject("CUC", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

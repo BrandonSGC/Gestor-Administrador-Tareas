@@ -39,13 +39,6 @@ namespace Proyecto_Ingeneria_Software_II
             this.Hide();
         }
 
-        
-
-        private void frmMenuPrincipal_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnVerTareas_Click(object sender, EventArgs e)
         {
             frmVerTareas frmPantalla = new frmVerTareas();

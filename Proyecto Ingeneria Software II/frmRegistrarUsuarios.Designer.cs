@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmRegistrarUsuarios));
             this.label1 = new System.Windows.Forms.Label();
             this.pnlNavegacion = new System.Windows.Forms.Panel();
+            this.btnVerTareas = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.pbAtras = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -55,7 +56,6 @@
             this.cbDepartamento = new System.Windows.Forms.ComboBox();
             this.lblDepartamento = new System.Windows.Forms.Label();
             this.btnRegistrar = new System.Windows.Forms.Button();
-            this.btnVerTareas = new System.Windows.Forms.Button();
             this.pnlNavegacion.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbAtras)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -87,6 +87,24 @@
             this.pnlNavegacion.Name = "pnlNavegacion";
             this.pnlNavegacion.Size = new System.Drawing.Size(189, 430);
             this.pnlNavegacion.TabIndex = 13;
+            // 
+            // btnVerTareas
+            // 
+            this.btnVerTareas.BackColor = System.Drawing.Color.Turquoise;
+            this.btnVerTareas.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnVerTareas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVerTareas.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVerTareas.ForeColor = System.Drawing.Color.Black;
+            this.btnVerTareas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnVerTareas.Location = new System.Drawing.Point(12, 374);
+            this.btnVerTareas.Margin = new System.Windows.Forms.Padding(5);
+            this.btnVerTareas.Name = "btnVerTareas";
+            this.btnVerTareas.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.btnVerTareas.Size = new System.Drawing.Size(169, 41);
+            this.btnVerTareas.TabIndex = 63;
+            this.btnVerTareas.Text = "Ver Tareas";
+            this.btnVerTareas.UseVisualStyleBackColor = false;
+            this.btnVerTareas.Click += new System.EventHandler(this.btnVerTareas_Click);
             // 
             // label2
             // 
@@ -341,32 +359,19 @@
             // 
             // btnRegistrar
             // 
-            this.btnRegistrar.Location = new System.Drawing.Point(331, 360);
+            this.btnRegistrar.BackColor = System.Drawing.Color.Turquoise;
+            this.btnRegistrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRegistrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRegistrar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegistrar.ForeColor = System.Drawing.Color.White;
+            this.btnRegistrar.Location = new System.Drawing.Point(345, 360);
             this.btnRegistrar.Margin = new System.Windows.Forms.Padding(5);
             this.btnRegistrar.Name = "btnRegistrar";
             this.btnRegistrar.Size = new System.Drawing.Size(183, 41);
             this.btnRegistrar.TabIndex = 62;
             this.btnRegistrar.Text = "Registrar";
-            this.btnRegistrar.UseVisualStyleBackColor = true;
+            this.btnRegistrar.UseVisualStyleBackColor = false;
             this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
-            // 
-            // btnVerTareas
-            // 
-            this.btnVerTareas.BackColor = System.Drawing.Color.Turquoise;
-            this.btnVerTareas.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnVerTareas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVerTareas.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVerTareas.ForeColor = System.Drawing.Color.Black;
-            this.btnVerTareas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnVerTareas.Location = new System.Drawing.Point(12, 374);
-            this.btnVerTareas.Margin = new System.Windows.Forms.Padding(5);
-            this.btnVerTareas.Name = "btnVerTareas";
-            this.btnVerTareas.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.btnVerTareas.Size = new System.Drawing.Size(169, 41);
-            this.btnVerTareas.TabIndex = 63;
-            this.btnVerTareas.Text = "Ver Tareas";
-            this.btnVerTareas.UseVisualStyleBackColor = false;
-            this.btnVerTareas.Click += new System.EventHandler(this.btnVerTareas_Click);
             // 
             // frmRegistrarUsuarios
             // 

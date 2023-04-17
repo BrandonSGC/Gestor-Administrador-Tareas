@@ -87,12 +87,12 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(74, 153);
+            this.label1.Location = new System.Drawing.Point(79, 153);
             this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(71, 17);
+            this.label1.Size = new System.Drawing.Size(62, 17);
             this.label1.TabIndex = 15;
-            this.label1.Text = "username";
+            this.label1.Text = "Brandon";
             // 
             // pbAtras
             // 
@@ -185,7 +185,7 @@
             // txtNombreDepartamento
             // 
             this.txtNombreDepartamento.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombreDepartamento.Location = new System.Drawing.Point(460, 84);
+            this.txtNombreDepartamento.Location = new System.Drawing.Point(342, 147);
             this.txtNombreDepartamento.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
             this.txtNombreDepartamento.Name = "txtNombreDepartamento";
             this.txtNombreDepartamento.Size = new System.Drawing.Size(302, 23);
@@ -195,7 +195,7 @@
             // 
             this.lblNombreDepartamento.AutoSize = true;
             this.lblNombreDepartamento.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombreDepartamento.Location = new System.Drawing.Point(263, 90);
+            this.lblNombreDepartamento.Location = new System.Drawing.Point(398, 117);
             this.lblNombreDepartamento.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblNombreDepartamento.Name = "lblNombreDepartamento";
             this.lblNombreDepartamento.Size = new System.Drawing.Size(187, 17);
@@ -207,7 +207,7 @@
             this.cbEncargado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbEncargado.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbEncargado.FormattingEnabled = true;
-            this.cbEncargado.Location = new System.Drawing.Point(266, 183);
+            this.cbEncargado.Location = new System.Drawing.Point(392, 242);
             this.cbEncargado.Name = "cbEncargado";
             this.cbEncargado.Size = new System.Drawing.Size(199, 25);
             this.cbEncargado.TabIndex = 46;
@@ -216,7 +216,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(263, 153);
+            this.label3.Location = new System.Drawing.Point(389, 212);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(205, 17);
             this.label3.TabIndex = 45;
@@ -227,14 +227,14 @@
             this.btnCrearDepartamento.BackColor = System.Drawing.Color.Turquoise;
             this.btnCrearDepartamento.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCrearDepartamento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCrearDepartamento.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCrearDepartamento.ForeColor = System.Drawing.Color.Black;
+            this.btnCrearDepartamento.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCrearDepartamento.ForeColor = System.Drawing.Color.White;
             this.btnCrearDepartamento.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCrearDepartamento.Location = new System.Drawing.Point(419, 314);
+            this.btnCrearDepartamento.Location = new System.Drawing.Point(392, 302);
             this.btnCrearDepartamento.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.btnCrearDepartamento.Name = "btnCrearDepartamento";
             this.btnCrearDepartamento.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.btnCrearDepartamento.Size = new System.Drawing.Size(198, 41);
+            this.btnCrearDepartamento.Size = new System.Drawing.Size(202, 41);
             this.btnCrearDepartamento.TabIndex = 47;
             this.btnCrearDepartamento.Text = "Crear Departamento";
             this.btnCrearDepartamento.UseVisualStyleBackColor = false;
@@ -244,6 +244,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(804, 429);
             this.Controls.Add(this.btnCrearDepartamento);
             this.Controls.Add(this.cbEncargado);

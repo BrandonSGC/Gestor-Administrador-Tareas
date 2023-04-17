@@ -42,6 +42,7 @@
             this.txtBuscarNombreTarea = new System.Windows.Forms.TextBox();
             this.btnBucar = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtDepEncargado = new System.Windows.Forms.TextBox();
             this.cbEstadoTarea = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.dtpFechaFinalizacion = new System.Windows.Forms.DateTimePicker();
@@ -53,7 +54,6 @@
             this.lblDescripcion = new System.Windows.Forms.Label();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.lblNombre = new System.Windows.Forms.Label();
-            this.txtDepEncargado = new System.Windows.Forms.TextBox();
             this.pnlNavegacion.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbAtras)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -217,8 +217,8 @@
             this.btnBucar.BackColor = System.Drawing.Color.Turquoise;
             this.btnBucar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnBucar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBucar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBucar.ForeColor = System.Drawing.Color.Black;
+            this.btnBucar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBucar.ForeColor = System.Drawing.Color.White;
             this.btnBucar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnBucar.Location = new System.Drawing.Point(847, 50);
             this.btnBucar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
@@ -250,6 +250,15 @@
             this.panel1.Size = new System.Drawing.Size(682, 501);
             this.panel1.TabIndex = 51;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // txtDepEncargado
+            // 
+            this.txtDepEncargado.Location = new System.Drawing.Point(213, 215);
+            this.txtDepEncargado.Margin = new System.Windows.Forms.Padding(7, 4, 7, 4);
+            this.txtDepEncargado.Name = "txtDepEncargado";
+            this.txtDepEncargado.ReadOnly = true;
+            this.txtDepEncargado.Size = new System.Drawing.Size(196, 22);
+            this.txtDepEncargado.TabIndex = 52;
             // 
             // cbEstadoTarea
             // 
@@ -322,6 +331,7 @@
             this.txtDescripcion.Margin = new System.Windows.Forms.Padding(7, 4, 7, 4);
             this.txtDescripcion.Multiline = true;
             this.txtDescripcion.Name = "txtDescripcion";
+            this.txtDescripcion.ReadOnly = true;
             this.txtDescripcion.Size = new System.Drawing.Size(589, 108);
             this.txtDescripcion.TabIndex = 50;
             // 
@@ -340,6 +350,7 @@
             this.txtNombre.Location = new System.Drawing.Point(166, 26);
             this.txtNombre.Margin = new System.Windows.Forms.Padding(7, 4, 7, 4);
             this.txtNombre.Name = "txtNombre";
+            this.txtNombre.ReadOnly = true;
             this.txtNombre.Size = new System.Drawing.Size(395, 22);
             this.txtNombre.TabIndex = 48;
             // 
@@ -352,14 +363,6 @@
             this.lblNombre.Size = new System.Drawing.Size(118, 16);
             this.lblNombre.TabIndex = 47;
             this.lblNombre.Text = "Nombre de Tarea:";
-            // 
-            // txtDepEncargado
-            // 
-            this.txtDepEncargado.Location = new System.Drawing.Point(213, 215);
-            this.txtDepEncargado.Margin = new System.Windows.Forms.Padding(7, 4, 7, 4);
-            this.txtDepEncargado.Name = "txtDepEncargado";
-            this.txtDepEncargado.Size = new System.Drawing.Size(196, 22);
-            this.txtDepEncargado.TabIndex = 52;
             // 
             // frmVerTareas
             // 
